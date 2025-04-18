@@ -7,7 +7,7 @@ for (let i = 0; i < arr.length; i++) {
     truthyValues.push(arr[i]);
   }
 }
-alert(truthyValues.join(", "));
+alert("Элементы с правдивым значением: " + truthyValues.join(", "));
 
 // 2. Второе задание
 let yearsInput = prompt("Введите года через запятую").split(",");
@@ -22,8 +22,8 @@ for (let i = 0; i < yearsInput.length; i++) {
     nonLeapYears.push(year);
   }
 }
-alert(leapYears.join(", "));
-alert(nonLeapYears.join(", "));
+alert("Високосные годы: " + leapYears.join(", "));
+alert("Не високосные годы: " + nonLeapYears.join(", "));
 
 // 3. Третье задание
 let months = prompt("Введите месяцы через запятую").split(",");
@@ -51,7 +51,8 @@ for (let i = 0; i < months.length; i++) {
     result29.push(months[i]);
   }
 }
-alert(result31.join(", "));
-alert(result30.join(", "));
-alert(result28.join(", "));
-alert(result29.join(", "));
+
+alert("Месяцы с 31 днем: " + result31.join(", "));
+alert("Месяцы с 30 днями: " + result30.join(", "));
+alert("Месяц с 28 днями: " + result28.join(", "));
+alert("Месяц с 29 днями: " + result29.join(", "));
