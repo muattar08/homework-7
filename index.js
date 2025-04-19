@@ -1,35 +1,31 @@
 let arr = ["hello", 1234, "", false, NaN, 123, true, " ", null];
 
-// Запрашиваем значение для проверки
+// 1 задание
 let userInput = prompt("Введите значение для проверки:");
 
 if (userInput) {
-  // Преобразуем введённое значение в нужный тип
   userInput = isNaN(userInput) ? userInput : Number(userInput);
 
-  // Проверка на правдивое значение
   if (arr.includes(userInput) && userInput) {
     alert(userInput + " является правдивым значением.");
   } else {
     alert(userInput + " не является правдивым значением.");
   }
 
-  // Запрос на проверку високосного года
+  // 2 задание
   let userYear = prompt("Введите год для проверки на високосность:");
 
   if (userYear) {
-    userYear = Number(userYear); // Преобразуем в число
+    userYear = Number(userYear);
 
     if ((userYear % 4 === 0 && userYear % 100 !== 0) || userYear % 400 === 0) {
       alert(userYear + " — это високосный год.");
     } else {
       alert(userYear + " — это обычный год.");
     }
-  } else {
-    alert("Вы не ввели год.");
   }
 
-  // Запрос на проверку месяца
+  // 3 задание
   let userMonth = prompt("Введите месяц для проверки количества дней:");
 
   if (userMonth) {
@@ -62,9 +58,5 @@ if (userInput) {
     if (daysInMonth) {
       alert(userMonth + " имеет " + daysInMonth + " дней.");
     }
-  } else {
-    alert("Вы не ввели месяц.");
   }
-} else {
-  alert("Вы не ввели значение.");
 }
