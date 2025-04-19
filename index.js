@@ -1,62 +1,29 @@
+// 1.первое задание 
 let arr = ["hello", 1234, "", false, NaN, 123, true, " ", null];
+let truthyValues = arr.filter(value => value); 
+console.log("Правдивые значения:", truthyValues);
 
-// 1 задание
-let userInput = prompt("Введите значение для проверки:");
 
-if (userInput) {
-  userInput = isNaN(userInput) ? userInput : Number(userInput);
+// 2. второе задание
+let years = [2000, 2001, 2002, 2003, 2004, 2100, 2400];
 
-  if (arr.includes(userInput) && userInput) {
-    alert(userInput + " является правдивым значением.");
-  } else {
-    alert(userInput + " не является правдивым значением.");
-  }
+let leapYears = years.filter(year =>
+  (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)  
+);
 
-  // 2 задание
-  let userYear = prompt("Введите год для проверки на високосность:");
+let nonLeapYears = years.filter(year =>
+  (year % 4 !== 0 || year % 100 === 0) && (year % 400 !== 0)  
+);
 
-  if (userYear) {
-    userYear = Number(userYear);
+console.log("Високосные года:", leapYears);
+console.log("Не високосные года:", nonLeapYears);
 
-    if ((userYear % 4 === 0 && userYear % 100 !== 0) || userYear % 400 === 0) {
-      alert(userYear + " — это високосный год.");
-    } else {
-      alert(userYear + " — это обычный год.");
-    }
-  }
 
-  // 3 задание
-  let userMonth = prompt("Введите месяц для проверки количества дней:");
+// 3. третье задание
+let months30 = ["Апрель", "Июнь", "Сентябрь", "Ноябрь"];
+let months31 = ["Январь", "Март", "Май", "Июль", "Август", "Октябрь", "Декабрь"];
+let months28 = ["Февраль"];
 
-  if (userMonth) {
-    let daysInMonth;
-
-    switch(userMonth) {
-      case "Февраль":
-        daysInMonth = 28;
-        break;
-      case "Апрель":
-      case "Июнь":
-      case "Сентябрь":
-      case "Ноябрь":
-        daysInMonth = 30;
-        break;
-      case "Январь":
-      case "Март":
-      case "Май":
-      case "Июль":
-      case "Август":
-      case "Октябрь":
-      case "Декабрь":
-        daysInMonth = 31;
-        break;
-      default:
-        alert("Некорректное название месяца.");
-        break;
-    }
-
-    if (daysInMonth) {
-      alert(userMonth + " имеет " + daysInMonth + " дней.");
-    }
-  }
-}
+console.log("Месяцы с 30 днями:", months30);
+console.log("Месяцы с 31 днем:", months31);
+console.log("Месяцы с 28 днями:", months28);
